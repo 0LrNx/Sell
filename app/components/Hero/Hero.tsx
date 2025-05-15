@@ -1,8 +1,14 @@
-import BgGrid from "@/public/grid.svg";
-
 import Image from "next/image";
-
+import BgGrid from "@/public/grid.svg";
 import AvatarList from "@/public/avatar.png";
+import Marquee from "@/components/magicui/marquee";
+
+import Card1 from "@/public/card_1.png";
+import Card2 from "@/public/card_2.png";
+import Card3 from "@/public/card_3.png";
+
+
+
 
 function Hero({ delaClass }: { delaClass: string }) {
     return (
@@ -44,7 +50,33 @@ function Hero({ delaClass }: { delaClass: string }) {
                         alt="Avatar List"
                         className="w-28 h-full rounded-full border-2 border-white mr-3"
                     />
-                    <p className="text-[#626262]"><strong className="text-black">More than 100+</strong> users are selling their products <br/> online with simple & easy ways</p>
+                    <p className="text-[#626262]"><strong className="text-black">More than 100+</strong> users are selling their products <br /> online with simple & easy ways</p>
+                </div>
+
+                <div className="mt-36">
+                    <Marquee
+                        className="w-[820px] h-[275px] bg-gradient-to-r from-[#3951E5] to-[#E693A5] rounded-lg"
+                        pauseOnHover
+                        repeat={1}
+                    >
+                        <div className="flex flex-row items-center justify-center gap-20">
+                            <Image
+                                src={Card1}
+                                alt="Card 1"
+                                className="w-[300px] h-[200px] rounded-lg mr-4"
+                            />
+                            <Image
+                                src={Card2}
+                                alt="Card 2"
+                                className="w-[300px] h-[200px] rounded-lg mr-4"
+                            />
+                            <Image
+                                src={Card3}
+                                alt="Card 3"
+                                className="w-[300px] h-[200px] rounded-lg mr-4"
+                            />
+                        </div>
+                    </Marquee>
                 </div>
             </div>
         </div>
