@@ -19,7 +19,7 @@ function Hero({ delaClass }: { delaClass: string }) {
             <Image
                 src={BgGrid}
                 alt="Background Grid"
-                className="absolute -z-[100] w-full h-full left-[5%] top-[5%] "
+                className="absolute -z-[100] w-full h-full left-[5%] -top-40"
             />
 
             <div className="flex flex-col items-center justify-center">
