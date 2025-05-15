@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
+import { motion } from "framer-motion"
 
 import Food from "@/public/food.svg"
 import Love from "@/public/love.svg"
@@ -16,7 +17,13 @@ function Features({ delaClass }: { delaClass: string }) {
                 <h1 className={`${delaClass} text-5xl font-bold mb-16`}>Features</h1>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div className="col-span-1">
+                    <motion.div 
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.5, type: "spring", stiffness: 100 }}
+                        viewport={{ once: true }}
+                        className="col-span-1"
+                    >
                         <div className="flex flex-col gap-4">
                             <div className="w-16 h-16 flex items-center justify-center">
                                 <Image src={Money} alt="Save time & Reduce cost" width={60} height={60} />
@@ -26,9 +33,15 @@ function Features({ delaClass }: { delaClass: string }) {
                                 Building your own online store, shopping cart, checkout, and licensing is time-consuming
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="col-span-1">
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.6, type: "spring", stiffness: 100 }}
+                        viewport={{ once: true }}
+                        className="col-span-1"
+                    >
                         <div className="flex flex-col gap-4">
                             <div className="w-16 h-16 flex items-center justify-center">
                                 <Image src={Food} alt="More features" width={60} height={60} />
@@ -38,7 +51,7 @@ function Features({ delaClass }: { delaClass: string }) {
                                 We simplify all that by combining all of the features and solutions you need to sell
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
 
                     <div className="h-24 w-96 col-span-1 bg-white rounded-lg shadow-md p-6 flex flex-row justify-between items-center">
                         <div className="flex-col">
@@ -50,7 +63,13 @@ function Features({ delaClass }: { delaClass: string }) {
                         </button>
                     </div>
 
-                    <div className="col-span-1">
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.7, type: "spring", stiffness: 100 }}
+                        viewport={{ once: true }}
+                        className="col-span-1"
+                    >
                         <div className="flex flex-col gap-4">
                             <div className="w-16 h-16 flex items-center justify-center">
                                 <Image src={Love} alt="Sell your popular product more" width={60} height={60} />
@@ -60,9 +79,15 @@ function Features({ delaClass }: { delaClass: string }) {
                                 Designed from the ground up to be easy to use and quick to set up for sellers
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="col-span-1">
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.8, type: "spring", stiffness: 100 }}
+                        viewport={{ once: true }}
+                        className="col-span-1"
+                    >
                         <div className="flex flex-col gap-4">
                             <div className="w-16 h-16 flex items-center justify-center">
                                 <Image src={World} alt="Sell it across the Globe" width={60} height={60} />
@@ -72,7 +97,7 @@ function Features({ delaClass }: { delaClass: string }) {
                                 Expand into new global markets with ease when you automatically display popular pricing
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
 
                     <div className="col-span-1 relative">
                         <Image
