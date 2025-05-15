@@ -6,8 +6,11 @@ import "./globals.css";
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Challenge Spikes",
-  description: "Challenge Spikes by @0xEzis",
+  icons: {
+    icon: "/logo.svg",
+  },
+  title: "Sell",
+  description: "Challenge Spikes by @0xEzis | Realised by FISS",
 };
 
 export default function RootLayout({
@@ -17,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(dm_sans.className)}>{children}</body>
+      <body className={cn(dm_sans.className, "bg-[#F5F5F5]")}>{children}</body>
     </html>
   );
 }

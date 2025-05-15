@@ -83,6 +83,10 @@ const config = {
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
       },
     },
+    fontFamily: {
+      manrope: 'var(--font-manrope)',
+      dmsans: 'var(--font-dmsans)'
+    }
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
