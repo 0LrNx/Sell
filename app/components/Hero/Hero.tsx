@@ -111,10 +111,13 @@ function Hero({ delaClass }: { delaClass: string }) {
                             className="w-full h-full bg-gradient-to-r from-[#3951E5] to-[#E693A5] rounded-3xl relative z-[20]"
                             pauseOnHover
                         >
-                            <div className="flex flex-row items-center justify-center gap-20">
-                                <Image src={Card1} alt="Card 1" className="w-[300px] h-[200px] rounded-lg mr-4" />
-                                <Image src={Card2} alt="Card 2" className="w-[300px] h-[200px] rounded-lg mr-4" />
-                                <Image src={Card3} alt="Card 3" className="w-[300px] h-[200px] rounded-lg mr-4" />
+                            <div className="flex flex-row items-center justify-center gap-12">
+                                <Image src={Card1} alt="Card 1" className="w-[300px] h-[200px] rounded-lg" />
+                                <Image src={Card2} alt="Card 2" className="w-[300px] h-[200px] rounded-lg" />
+                                <Image src={Card3} alt="Card 3" className="w-[300px] h-[200px] rounded-lg" />
+                                <Image src={Card1} alt="Card 1" className="w-[300px] h-[200px] rounded-lg" />
+                                <Image src={Card2} alt="Card 2" className="w-[300px] h-[200px] rounded-lg" />
+                                <Image src={Card3} alt="Card 3" className="w-[300px] h-[200px] rounded-lg" />
                             </div>
                         </Marquee>
                     </div>
