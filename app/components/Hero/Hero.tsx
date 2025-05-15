@@ -12,7 +12,7 @@ import Card3 from "@/public/card_3.png";
 
 function Hero({ delaClass }: { delaClass: string }) {
     return (
-        <div>
+        <section className="relative flex flex-col items-center justify-center w-full pt-20 pb-60">
             <div className="bg-[#92C4FE] w-[450px] h-[450px] rounded-full absolute right-96 -top-56 blur-[150px] -z-[500] opacity-80"></div>
             <div className="bg-[#FEA492] w-[550px] h-[550px] rounded-full absolute -z-[500] left-40 -top-24 blur-[300px] opacity-40"></div>
 
@@ -22,7 +22,7 @@ function Hero({ delaClass }: { delaClass: string }) {
                 className="absolute -z-[100] w-full h-full left-[5%] top-[5%] "
             />
 
-            <div className="flex flex-col items-center justify-center mt-20">
+            <div className="flex flex-col items-center justify-center">
                 <button className="bg-gradient-to-r from-[#E693A5] to-[#3951E5] text-white font-bold font-dmsans rounded-full px-6 py-2">
                     Introducing a new online selling platform 🎉
                 </button>
@@ -44,53 +44,39 @@ function Hero({ delaClass }: { delaClass: string }) {
                     </button>
                 </div>
 
-                <div className="flex flex-row mt-6 w-1/2 mx-auto justify-center items-center">
+                <div className="flex flex-row mt-6 w-4/6 mx-auto justify-center items-center">
                     <Image
                         src={AvatarList}
                         alt="Avatar List"
-                        className="w-28 h-full rounded-full border-2 border-white mr-3"
+                        className="w-28 rounded-full border-2 border-white mr-3"
                     />
-                    <p className="text-[#626262]"><strong className="text-black">More than 100+</strong> users are selling their products <br /> online with simple & easy ways</p>
+                    <p className="text-[#626262]"><strong className="text-black">More than 100+</strong> users are selling their products online with simple & easy ways</p>
                 </div>
 
 
-                <div className="mt-36 relative z-[200]">
-                    {/* Ombres */}
-                    <div className="absolute w-[779px] h-[275px] bg-white opacity-80 rounded-lg z-9 -mt-4 left-1/2 transform -translate-x-1/2"></div>
-                    <div className="absolute w-[730px] h-[275px] bg-white opacity-50 rounded-lg z-8 -mt-6 left-1/2 transform -translate-x-1/2"></div>
-                    <div className="absolute w-[684px] h-[275px] bg-white opacity-20 rounded-lg z-7 -mt-8 left-1/2 transform -translate-x-1/2"></div>
-                    <div className="bg-[#AE92FE] w-[270px] h-[270px] rounded-full absolute z-6 -left-16 -top-20 blur-[200px]"></div>
-
-
+                <div className="mt-36">
                     {/* Marquee */}
-                    <div className="absolute w-[820px] h-[275px] left-1/2 transform -translate-x-1/2 z-[300]">
+                    <div className="relative w-[820px] h-[275px] z-[300] mx-auto mt-12">
+                        {/* Ombres */}
+                        <div className="absolute w-[779px] h-[275px] bg-white opacity-80 rounded-3xl z-10 -top-4 left-1/2 transform -translate-x-1/2"></div>
+                        <div className="absolute w-[730px] h-[275px] bg-white opacity-50 rounded-3xl z-9 -top-6 left-1/2 transform -translate-x-1/2"></div>
+                        <div className="absolute w-[684px] h-[275px] bg-white opacity-40 rounded-3xl z-8 -top-8 left-1/2 transform -translate-x-1/2"></div>
+                        <div className="bg-[#AE92FE] w-[270px] h-[270px] rounded-full absolute z-6 blur-[200px] ml-56"></div> 
+
                         <Marquee
-                            className="w-full h-full bg-gradient-to-r from-[#3951E5] to-[#E693A5] rounded-lg"
+                            className="w-full h-full bg-gradient-to-r from-[#3951E5] to-[#E693A5] rounded-3xl relative z-[20]"
                             pauseOnHover
-                            repeat={1}
                         >
                             <div className="flex flex-row items-center justify-center gap-20">
-                                <Image
-                                    src={Card1}
-                                    alt="Card 1"
-                                    className="w-[300px] h-[200px] rounded-lg mr-4"
-                                />
-                                <Image
-                                    src={Card2}
-                                    alt="Card 2"
-                                    className="w-[300px] h-[200px] rounded-lg mr-4"
-                                />
-                                <Image
-                                    src={Card3}
-                                    alt="Card 3"
-                                    className="w-[300px] h-[200px] rounded-lg mr-4"
-                                />
+                                <Image src={Card1} alt="Card 1" className="w-[300px] h-[200px] rounded-lg mr-4" />
+                                <Image src={Card2} alt="Card 2" className="w-[300px] h-[200px] rounded-lg mr-4" />
+                                <Image src={Card3} alt="Card 3" className="w-[300px] h-[200px] rounded-lg mr-4" />
                             </div>
                         </Marquee>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
