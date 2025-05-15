@@ -6,11 +6,11 @@ import "./globals.css";
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  icons: {
-    icon: "/logo.svg",
-  },
   title: "Sell",
   description: "Challenge Spikes by @0xEzis | Realised by FISS",
+  icons: {
+    icon: "/favicon.ico",
+  }
 };
 
 export default function RootLayout({
