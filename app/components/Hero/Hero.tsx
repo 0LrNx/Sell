@@ -53,30 +53,41 @@ function Hero({ delaClass }: { delaClass: string }) {
                     <p className="text-[#626262]"><strong className="text-black">More than 100+</strong> users are selling their products <br /> online with simple & easy ways</p>
                 </div>
 
-                <div className="mt-36">
-                    <Marquee
-                        className="w-[820px] h-[275px] bg-gradient-to-r from-[#3951E5] to-[#E693A5] rounded-lg"
-                        pauseOnHover
-                        repeat={1}
-                    >
-                        <div className="flex flex-row items-center justify-center gap-20">
-                            <Image
-                                src={Card1}
-                                alt="Card 1"
-                                className="w-[300px] h-[200px] rounded-lg mr-4"
-                            />
-                            <Image
-                                src={Card2}
-                                alt="Card 2"
-                                className="w-[300px] h-[200px] rounded-lg mr-4"
-                            />
-                            <Image
-                                src={Card3}
-                                alt="Card 3"
-                                className="w-[300px] h-[200px] rounded-lg mr-4"
-                            />
-                        </div>
-                    </Marquee>
+
+                <div className="mt-36 relative z-[200]">
+                    {/* Ombres */}
+                    <div className="absolute w-[779px] h-[275px] bg-white opacity-80 rounded-lg z-9 -mt-4 left-1/2 transform -translate-x-1/2"></div>
+                    <div className="absolute w-[730px] h-[275px] bg-white opacity-50 rounded-lg z-8 -mt-6 left-1/2 transform -translate-x-1/2"></div>
+                    <div className="absolute w-[684px] h-[275px] bg-white opacity-20 rounded-lg z-7 -mt-8 left-1/2 transform -translate-x-1/2"></div>
+                    <div className="bg-[#AE92FE] w-[270px] h-[270px] rounded-full absolute z-6 -left-16 -top-20 blur-[200px]"></div>
+
+
+                    {/* Marquee */}
+                    <div className="absolute w-[820px] h-[275px] left-1/2 transform -translate-x-1/2 z-[300]">
+                        <Marquee
+                            className="w-full h-full bg-gradient-to-r from-[#3951E5] to-[#E693A5] rounded-lg"
+                            pauseOnHover
+                            repeat={1}
+                        >
+                            <div className="flex flex-row items-center justify-center gap-20">
+                                <Image
+                                    src={Card1}
+                                    alt="Card 1"
+                                    className="w-[300px] h-[200px] rounded-lg mr-4"
+                                />
+                                <Image
+                                    src={Card2}
+                                    alt="Card 2"
+                                    className="w-[300px] h-[200px] rounded-lg mr-4"
+                                />
+                                <Image
+                                    src={Card3}
+                                    alt="Card 3"
+                                    className="w-[300px] h-[200px] rounded-lg mr-4"
+                                />
+                            </div>
+                        </Marquee>
+                    </div>
                 </div>
             </div>
         </div>
