@@ -1,4 +1,7 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 import BgGrid from "@/public/grid.svg";
 import AvatarList from "@/public/avatar.png";
 import Marquee from "@/components/magicui/marquee";
@@ -23,38 +26,79 @@ function Hero({ delaClass }: { delaClass: string }) {
             />
 
             <div className="flex flex-col items-center justify-center">
-                <button className="bg-gradient-to-r from-[#E693A5] to-[#3951E5] text-white font-bold font-dmsans rounded-full px-6 py-2">
+                <motion.button 
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-gradient-to-r from-[#E693A5] to-[#3951E5] text-white font-bold font-dmsans rounded-full px-6 py-2"
+                >
                     Introducing a new online selling platform 🎉
-                </button>
+                </motion.button>
 
-                <h1 className={delaClass + " text-6xl font-normal text-center mt-10"}>
+                <motion.h1
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}                
+                    className={delaClass + " text-6xl font-normal text-center mt-10"}
+                >
                     Best way to sell <br /> your digital product
-                </h1>
+                </motion.h1>
 
-                <p className="mt-10 text-[#626262] text-base font-medium text-center">Go from Zero to Hero with simple platform that helps <br /> creators like you sell their digital products online.</p>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="mt-10 text-[#626262] text-base font-medium text-center"
+                >
+                    Go from Zero to Hero with simple platform that helps <br /> creators like you sell their digital products online.
+                </motion.p>
 
-                <div className="flex flex-row mt-10">
-                    <input
+                <div className="flex flex-row mt-10 relative overflow-hidden">
+                    <motion.input
                         type="text"
                         placeholder="Your best email address"
+                        initial={{ x: '-100%' }}
+                        animate={{ x: 0 }}
+                        transition={{ duration: 0.5 }}
                         className="bg-white text-[#626262] font-medium font-dmsans rounded-lg px-6 py-2 h-[50px] placeholder:text-[#626262] placeholder:font-bold placeholder:font-dmsans"
                     />
-                    <button className="bg-[#314EE7] text-white font-bold font-dmsans rounded-lg px-6 py-2 ml-4">
+                    <motion.button
+                        initial={{ x: '101%' }}
+                        animate={{ x: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="bg-[#314EE7] text-white font-bold font-dmsans rounded-lg px-6 py-2 ml-4"
+                    >
                         Try it out
-                    </button>
+                    </motion.button>
                 </div>
 
-                <div className="flex flex-row mt-6 w-4/6 mx-auto justify-center items-center">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="flex flex-row mt-6 w-4/6 mx-auto justify-center items-center"
+                >
                     <Image
                         src={AvatarList}
                         alt="Avatar List"
                         className="w-28 rounded-full border-2 border-white mr-3"
                     />
-                    <p className="text-[#626262]"><strong className="text-black">More than 100+</strong> users are selling their products online with simple & easy ways</p>
-                </div>
+                    <p className="text-[#626262]">
+                        <strong className="text-black">More than 100+</strong> users are selling their products online with simple & easy ways
+                    </p>
+                </motion.div>
 
 
-                <div className="mt-36">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="mt-36"
+                >
                     {/* Marquee */}
                     <div className="relative w-[820px] h-[275px] z-[300] mx-auto mt-12">
                         {/* Ombres */}
@@ -74,7 +118,7 @@ function Hero({ delaClass }: { delaClass: string }) {
                             </div>
                         </Marquee>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );
