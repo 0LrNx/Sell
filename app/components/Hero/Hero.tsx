@@ -16,13 +16,15 @@ import Card3 from "@/public/card_3.png";
 function Hero({ delaClass }: { delaClass: string }) {
     return (
         <section className="relative flex flex-col items-center justify-center w-full pt-20 pb-60">
-            <div className="bg-[#92C4FE] w-[450px] h-[450px] rounded-full absolute right-96 -top-56 blur-[150px] -z-[500] opacity-80"></div>
-            <div className="bg-[#FEA492] w-[550px] h-[550px] rounded-full absolute -z-[500] left-40 -top-24 blur-[300px] opacity-40"></div>
+            <div className="absolute inset-0 pointer-events-none -z-10">
+                <div className="bg-[#92C4FE] w-[450px] h-[450px] rounded-full absolute right-96 -top-96 blur-[150px] opacity-80"></div>
+                <div className="bg-[#FEA492] w-[550px] h-[550px] rounded-full absolute left-40 -top-24 blur-[300px] opacity-40"></div>
+            </div>
 
             <Image
                 src={BgGrid}
                 alt="Background Grid"
-                className="absolute -z-[100] w-full h-full left-[5%] -top-40"
+                className="absolute -z-10 w-full h-full left-[5%] -top-40"
             />
 
             <div className="flex flex-col items-center justify-center">
